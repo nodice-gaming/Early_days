@@ -8,9 +8,9 @@
         "Model"                     "models/creeps/neutral_creeps/n_creep_forest_trolls/n_creep_forest_troll_berserker.mdl" // Model.
         "BaseClass"                 "npc_dota_creature"
         "SoundSet"                  "n_creep_Melee"
-        "Level"                     "1"
+        "Level"                     "3"
         "MaxLevel"                  "5"
-        "ModelScale"                "1.2"
+        "ModelScale"                "1"
         "IsNeutralUnitType"         "0"
         "HasInventory"              "0"
         "UnitLabel"                 "tribal_melee"  
@@ -19,8 +19,8 @@
         //----------------------------------------------------------------
         "Ability1"                  "juggernaut_omni_slash_datadriven"          // Ability 1
         "Ability2"                  "bounty_hunter_jinada_datadriven"           // Ability 2
-        "Ability3"                  "tribal_warrior_cower"                      // Ability 3
-        "Ability4"                  "tribal_warrior_retreat"                    // Ability 4
+        "Ability3"                  ""                                          // Ability 3
+        "Ability4"                  ""                                          // Ability 4
 
         // Armor
         //----------------------------------------------------------------
@@ -32,9 +32,9 @@
         "AttackDamageType"          "DAMAGE_TYPE_ArmorPhysical"
         "AttackDamageMin"           "10"        // Damage range min.
         "AttackDamageMax"           "15"        // Damage range max.
-        "AttackRate"                "1.6"     // Speed of attack.
+        "AttackRate"                "1.6"       // Speed of attack.
         "AttackAnimationPoint"      "0.4"       // Normalized time in animation cycle to attack.
-        "AttackAcquisitionRange"    "600"       // Range within a target can be acquired.
+        "AttackAcquisitionRange"    "550"       // Range within a target can be acquired.
         "AttackRange"               "50"        // Range within a target can be attacked.
         "AttackRangeBuffer"         "50"        // Extra range the target can move without canceling the attack
                  
@@ -46,7 +46,7 @@
 
         // Bounty
         //----------------------------------------------------------------
-        "BountyXP"               "45"      // Experience earned Max.
+        "BountyXP"                  "45"        // Experience earned.
         "BountyGoldMin"             "20"        // Gold earned min.
         "BountyGoldMax"             "25"        // Gold earned max.
 
@@ -58,10 +58,10 @@
 
         // Status
         //----------------------------------------------------------------
-        "StatusHealth"              "250"       // Base health.
+        "StatusHealth"              "300"       // Base health.
         "StatusHealthRegen"         "1"     // Health regeneration rate.
-        "StatusMana"                "100"       // Base mana.
-        "StatusManaRegen"           "0.75"      // Mana regeneration rate.       
+        "StatusMana"                "200"       // Base mana.
+        "StatusManaRegen"           "1"      // Mana regeneration rate.       
         
         // Vision
         //----------------------------------------------------------------
