@@ -164,7 +164,7 @@ function GameMode:OnPlayerLevelUp(keys)
   local heroName = hero:GetUnitName()
 
   if heroName == "npc_dota_tribal_warrior" then
-    local abilityOne = hero:FindAbilityByName("tribal_warrior_frenzy_datadriven")
+    local abilityOne = hero:FindAbilityByName("juggernaut_omni_slash_datadriven")
     local abilityTwo = hero:FindAbilityByName("tribal_warrior_gouge_datadriven")
     abilityOne:SetLevel(abilityOne:GetLevel() + 1)
     abilityTwo:SetLevel(abilityTwo:GetLevel() + 1)
