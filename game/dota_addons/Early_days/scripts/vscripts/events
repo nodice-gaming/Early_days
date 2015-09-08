@@ -106,6 +106,19 @@ function GameMode:OnNonPlayerUsedAbility(keys)
   local abilityname=  keys.abilityname
 end
 
+function GameMode:OnGameInProgress()
+    local repeat_interval = 30 -- Rerun this timer every *repeat_interval* game-time seconds
+    local start_after = 30 -- Start this timer *start_after* game-time seconds later
+
+    Timers:CreateTimer(start_after, function()
+        function SpawnCreeps()
+    local point = Entities:FindByName( nil, "spawnerino"):GetAbsOrigin()
+    local unit = CreateUnitByName("sheep", point, true, nil, nil, DOTA_TEAM_NEUTRALS)
+        end
+        return repeat_interval
+    end)
+end
+
 -- A player changed their name
 function GameMode:OnPlayerChangedName(keys)
   DebugPrint('[BAREBONES] OnPlayerChangedName')
@@ -139,6 +152,23 @@ function GameMode:OnPlayerLevelUp(keys)
   DebugPrintTable(keys)
 
   local player = EntIndexToHScript(keys.player)
+  local level = keys.level
+end
+
+function GameMode:OnPlayerLevelUp(keys)
+  DebugPrint('[BAREBONES] OnPlayerLevelUp')
+  DebugPrintTable(keys)
+
+  local player = EntIndexToHScript(keys.player)
+  local unit = hero:GetAssignedHero()
+  local heroName = hero:GetUnitName()
+
+  if heroName == "npc_dota_tribal_warrior" then
+    local abilityOne = hero:FindAbilityByName("tribal_warrior_frenzy_datadriven")
+    local abilityTwo = hero:FindAbilityByName("tribal_warrior_gouge_datadriven")
+    abilityOne:SetLevel(abilityOne:GetLevel() + 1)
+    abilityTwo:SetLevel(abilityTwo:GetLevel() + 1)
+  end
   local level = keys.level
 end
 
